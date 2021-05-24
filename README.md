@@ -8,7 +8,7 @@ Aplicación en la cual se tiene un equipo de 6 héroes de los cuales 3 son bueno
 
 1- Copie del repositorio el enlace.
 
-2- Ejecute desde la terminal:  git clone ... en la ubicación que desea clonar el proyecto.
+2- Ejecute desde la terminal:  git clone git@github.com:federicomontillo/SuperAppHeroes.git en la ubicación que desea clonar el proyecto.
 
 3- Para montar las dependencias necesarias para correr el proyecto ejecute: npm install
 
