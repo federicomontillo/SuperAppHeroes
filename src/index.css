@@ -1,0 +1,135 @@
+body {
+    background-image: url(./assets/bgcomics.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive; 
+    color: white;
+    text-shadow: 1px 1px 2px red;
+}
+
+h3 {
+    font-family: 'Luckiest Guy', cursive; 
+    color: black;
+    text-shadow: 1px 1px 2px red;
+}
+
+/* -- NavBar --**/
+.nav-prop {
+    background-color: black;
+}
+
+.brand {
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive; 
+    color: black;
+    text-shadow: 2px 2px 2px red;
+}
+
+/* -- Login --**/
+
+.formulario {
+    background-color: white;
+    border-radius: 2px;
+    border: 2px solid black;
+    -webkit-box-shadow: 3px 3px 0px 1px rgb(0, 0, 0); 
+    box-shadow: 3px 3px 0px 1px rgb(0, 0, 0);
+}
+
+.label {
+    color: black;
+}
+
+.form-error {
+    border-radius: 5px;
+    width: 60%;
+    margin: 5px auto;
+    color: black;
+    background: rgba(255, 0, 0, 0.3);
+}
+
+/* -- PowerStats --**/
+
+.powerstats {
+    padding: 3px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+.powerstats h3 {
+    text-align: center;
+}
+
+.contenedor-powerstats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.powerstats-1 li {
+    color: black;
+    font-weight: bold;
+}
+
+.powerstats-1 li i {
+    color: yellow;
+}
+.powerstats-1 li span {
+    color: red;
+    font-weight: bold;
+}
+
+.powerstats-1 ul {
+    list-style: none;
+}
+
+@media (max-width: 600px) {
+    .contenedor-powerstats {
+        display: block;
+        text-align: center;
+    }
+  }
+  
+  /* -- Heroes --**/
+
+  .contenedor-heroes {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .contenedor-heroes {
+        width: 90%;
+      display: block;
+    }
+  }
+
+  /* -- Heroe --**/
+
+  .bg-heroe {
+    background: rgb(242,0,0);
+    background: linear-gradient(180deg, rgba(242,0,0,1) 18%, rgba(255,255,255,1) 100%);
+    -webkit-box-shadow: 3px 3px 0px 1px rgb(0, 0, 0); 
+    box-shadow: 3px 3px 0px 1px rgb(0, 0, 0);
+  }
+
+  /* -- Busuqeda --**/
+
+  .contenedor-heroes p {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+  }
