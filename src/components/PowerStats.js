@@ -90,7 +90,7 @@ export const PowerStats = ({heroes}) => {
             <div className="contenedor-powerstats">   
                 <div className="powerstats-1">
                     <ul>
-                        <li>{powerstatsOrdenados[0].Nombre}<span>{powerstatsOrdenados[0].valor} </span><i className="fas fa-star"></i></li>
+                        <li>{powerstatsOrdenados[0].Nombre}<span>{powerstatsOrdenados[0].valor} </span></li>
                         <li>{powerstatsOrdenados[1].Nombre}<span>{powerstatsOrdenados[1].valor}</span></li>
                         <li>{powerstatsOrdenados[2].Nombre}<span>{powerstatsOrdenados[2].valor}</span></li>
                         <li>{powerstatsOrdenados[3].Nombre}<span>{powerstatsOrdenados[3].valor}</span></li>
@@ -100,7 +100,7 @@ export const PowerStats = ({heroes}) => {
                 </div>
                 <div className="powerstats-1">
                     <ul>
-                        <li>Peso promedio: <span>{promedioPeso.toFixed(1)} Kg.</span></li>
+                        <li>Peso promedio: <span>{promedioPeso.toFixed(1)} Kg.</span><i className="fas fa-star"></i></li>
                         <li>Altura Promedio: <span>{promedioAltura.toFixed(1)} Cm.</span></li>
                     </ul>
                 </div>

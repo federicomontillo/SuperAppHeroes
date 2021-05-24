@@ -1,7 +1,8 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer, useEffect, useContext } from 'react';
 import Swal from 'sweetalert2';
 import clienteAxiosHeroes from '../../config/axiosHeroes';
 import { AGREGAR_HEROE, ELIMINAR_HEROE } from '../../types';
+import AuthContext from '../../context/autenticacion/authContext';
 import HeroeContext from './heroeContext';
 import HeroeReducer from './heroeReducer';
 
@@ -10,30 +11,36 @@ const HeroeSteate = props => {
     const initialState = {
         heroes: [],
     };
-
     //Dispatch y State
     const [state, dispatch] = useReducer(HeroeReducer, initialState);
+
+    const authContext = useContext(AuthContext);
+    const { token, usuarioAutenticado } = authContext;
     
 
     //Resultados iniciales héroes
     
     useEffect(() => {
-        const hereosInicio = async () => {
-            const ids = ['644', '346', '107', '309', '321', '680'];
-            for(let i = 0; i < 6 ; i++){
-                try {
-                    const heroes = await clienteAxiosHeroes.get(`"${ids[i]}"`);
-                        dispatch ({
-                            type: AGREGAR_HEROE,
-                            payload: heroes.data
-                        })
-                } catch (error) {
-                    console.log(error);
-                } 
+        if(token || usuarioAutenticado ) {
+            const hereosInicio = async () => {
+                const ids = ['644', '346', '107', '309', '321', '680'];
+                for(let i = 0; i < 6 ; i++){
+                    try {
+                        const heroes = await clienteAxiosHeroes.get(`2979903088905553/"${ids[i]}"`);
+                            dispatch ({
+                                type: AGREGAR_HEROE,
+                                payload: heroes.data
+                            })
+                    } catch (error) {
+                        console.log(error);
+                    } 
+                };
             };
-        };
-        hereosInicio();
-    }, []);
+            hereosInicio();
+        }; 
+    }, [token, usuarioAutenticado]);
+
+
     
     //Agregar héroe
     const agregarHeroe = heroes => {

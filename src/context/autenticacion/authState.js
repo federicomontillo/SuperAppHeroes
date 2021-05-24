@@ -1,7 +1,6 @@
 import React, { useReducer } from 'react';
 import AuthContext from './authContext';
 import AuthReducer from './authReducer';
-
 import { LOGIN_EXITOSO, LOGIN_ERROR, CERRAR_SESION, CAMBIAR_PANTALLA, CAMBIAR_PANTALLA_BUSCAR } from '../../types';
 import clienteAxios from '../../config/axios';
 
@@ -15,6 +14,7 @@ const AuthState = props => {
         mensaje: null,
         pantalla: true
     }
+
 
     const [ state, dispatch ] = useReducer( AuthReducer, initialState );
 
@@ -42,8 +42,8 @@ const AuthState = props => {
     //Cerrar sesión del usuario
     const cerrarSesion = () => {
         dispatch({
-            type: CERRAR_SESION
-        })
+            type: CERRAR_SESION,
+        });
     }
 
     const cambiarPantalla = () => {

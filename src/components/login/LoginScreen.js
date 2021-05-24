@@ -15,7 +15,7 @@ export const LoginScreen = ( props ) => {
         if( autenticado ) {
             props.history.replace('/heroes');
         }
-    }, [  autenticado, props.history ]);
+    }, [ autenticado, props.history ]);
 
 
     const formik = useFormik({

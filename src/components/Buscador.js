@@ -18,7 +18,7 @@ export const Buscador = () => {
         }),
         onSubmit: async ( heroe ) => {
             try {
-                const busqueda = await clienteAxiosHeroes.get(`/search/${heroe.heroe}`);
+                const busqueda = await clienteAxiosHeroes.get(`2979903088905553/search/${heroe.heroe}`);
                 setBusqueda(busqueda.data);
                     } catch (error) {
                         console.log(error);
