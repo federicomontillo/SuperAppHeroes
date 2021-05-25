@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import AuthContext from '../../context/autenticacion/authContext';
+import HeroeContext from '../../context/heroe/heroeContext';
 import Logo from '../../assets/logopng.png';
 
 export const Navbar = () => {
@@ -8,6 +9,9 @@ export const Navbar = () => {
     //Extraer valores del context
     const authContext = useContext(AuthContext);
     const { cerrarSesion, cambiarPantalla, cambiarPantallaBuscar } = authContext;
+
+    const heroeContext = useContext(HeroeContext);
+    const { limpiarHeroes } = heroeContext;
 
     return (
         <nav className="navbar navbar-expand-sm navbar-dark nav-prop">
@@ -49,7 +53,7 @@ export const Navbar = () => {
                                 className="nav-item nav-link text-center p-4" 
                                 exact
                                 to="/login"
-                                onClick={ () => cerrarSesion() }
+                                onClick={ () => cerrarSesion(limpiarHeroes())}
                                 >
                                 Logout
                             </NavLink>  

@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from 'react';
-import AuthContext from '../../context/autenticacion/authContext';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+
+import AuthContext from '../../context/autenticacion/authContext';
 
 
 export const LoginScreen = ( props ) => {

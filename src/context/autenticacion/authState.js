@@ -1,8 +1,11 @@
 import React, { useReducer } from 'react';
+import clienteAxios from '../../config/axios';
+
+import { LOGIN_EXITOSO, LOGIN_ERROR, CERRAR_SESION, CAMBIAR_PANTALLA, CAMBIAR_PANTALLA_BUSCAR } from '../../types';
 import AuthContext from './authContext';
 import AuthReducer from './authReducer';
-import { LOGIN_EXITOSO, LOGIN_ERROR, CERRAR_SESION, CAMBIAR_PANTALLA, CAMBIAR_PANTALLA_BUSCAR } from '../../types';
-import clienteAxios from '../../config/axios';
+
+
 
 
 const AuthState = props => {

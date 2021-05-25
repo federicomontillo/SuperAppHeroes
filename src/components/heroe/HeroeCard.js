@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react';
-import HeroeContext from '../../context/heroe/heroeContext';
-import AuthContext from '../../context/autenticacion/authContext'
 import Swal from 'sweetalert2';
 import  { Modal } from 'react-bootstrap';
+
+import HeroeContext from '../../context/heroe/heroeContext';
+import AuthContext from '../../context/autenticacion/authContext'
+
 
 export const HeroeCard = ({ heroe }) => {
 
@@ -11,6 +13,7 @@ export const HeroeCard = ({ heroe }) => {
 
     const heroeContext = useContext(HeroeContext);
     const { agregarHeroe, eliminarHeroe, heroes } = heroeContext;
+
     const [show, setShow] = useState(false);
 
     //Extraer Powerstats

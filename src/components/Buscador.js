@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import clienteAxiosHeroes from '../config/axiosHeroes';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+
+import clienteAxiosHeroes from '../config/axiosHeroes';
 import { HeroeCard } from './heroe/HeroeCard';
 
 export const Buscador = () => {

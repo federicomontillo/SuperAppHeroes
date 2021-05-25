@@ -1,7 +1,9 @@
 import React, { useReducer, useEffect, useContext } from 'react';
 import Swal from 'sweetalert2';
 import clienteAxiosHeroes from '../../config/axiosHeroes';
-import { AGREGAR_HEROE, ELIMINAR_HEROE } from '../../types';
+
+import { AGREGAR_HEROE, ELIMINAR_HEROE, LIMPIAR_HEROES } from '../../types';
+
 import AuthContext from '../../context/autenticacion/authContext';
 import HeroeContext from './heroeContext';
 import HeroeReducer from './heroeReducer';
@@ -60,8 +62,8 @@ const HeroeSteate = props => {
                 '¡Muy Bien!',
                 'Se agregó el héroe a tu equipo.',
                 'success'
-            )
-        }
+            );
+        };
     };
 
     //Eliminar Héroe
@@ -107,13 +109,24 @@ const HeroeSteate = props => {
           })
     };
 
+    //Limpiar Heroes
+    const limpiarHeroes = () => {
+        if(!token){
+            dispatch({
+                type: LIMPIAR_HEROES
+            });
+        } else {    
+            return;    
+        };
+    }
 
     return (
         <HeroeContext.Provider
             value={{
                 heroes: state.heroes,
                 agregarHeroe,
-                eliminarHeroe
+                eliminarHeroe,
+                limpiarHeroes
             }}
         >
             {props.children}

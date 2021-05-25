@@ -1,4 +1,4 @@
-import { AGREGAR_HEROE, ELIMINAR_HEROE } from '../../types';
+import { AGREGAR_HEROE, ELIMINAR_HEROE, LIMPIAR_HEROES } from '../../types';
 
 const heroeReducer = (state, action) => {
     switch(action.type) {
@@ -11,7 +11,12 @@ const heroeReducer = (state, action) => {
                 return {
                     ...state,
                     heroes: state.heroes.filter(heroe => heroe.id !== action.payload)
-                }        
+                }
+            case LIMPIAR_HEROES:
+                return{
+                    ...state,
+                    heroes: []
+                }            
         default:
             return state;
     }

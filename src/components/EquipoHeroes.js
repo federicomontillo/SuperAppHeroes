@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
-import { HeroeCard } from '../components/heroe/HeroeCard';
-import HeroeContext from '../context/heroe/heroeContext';
+
 import { PowerStats } from './PowerStats';
+import { HeroeCard } from '../components/heroe/HeroeCard';
+
+import HeroeContext from '../context/heroe/heroeContext';
 
 export const EquipoHeroes = () => {
 

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
+
+import { Navbar } from '../components/ui/Navbar';
 import { Buscador } from '../components/Buscador';
 import { EquipoHeroes } from '../components/EquipoHeroes';
-import { Navbar } from '../components/ui/Navbar';
+
 
 export const DashboardRoutes = () => {
     return (
